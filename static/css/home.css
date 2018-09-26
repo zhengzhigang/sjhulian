@@ -1,0 +1,20 @@
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+.header-list {
+    float: left;
+}
+.header-list li {
+    padding: 0 30px;
+}
+.header-list li:hover {
+    background: blue;
+    color: #fff;
+}
