@@ -1,20 +1,26 @@
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1160px;
     margin: auto;
 }
-.header {
+
+/*
+ * main css start
+ */
+ .main {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+ }
+ .swiper-container {
     width: 100%;
-    height: 60px;
-    line-height: 60px;
+    height: 300px;
+}  
+.swiper-slide {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
 }
-.header-list {
-    float: left;
-}
-.header-list li {
-    padding: 0 30px;
-}
-.header-list li:hover {
-    background: blue;
-    color: #fff;
-}
+/*
+ * main css end
+ */

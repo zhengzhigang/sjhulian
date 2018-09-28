@@ -49,4 +49,120 @@ table {
 html, body {
 	font-size: 14px;
 	color: #333;
+	background: #fff;
 }
+a {
+	text-decoration: none;
+	color: #333;
+}
+input, button {
+	outline: none;
+}
+button, a {
+	cursor: pointer;
+}
+.clearfix:after{
+	content: "020"; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;  
+}
+.clearfix {
+	/* 触发 hasLayout */ 
+	zoom: 1; 
+}
+.btn {
+	padding: 6px 10px;
+	border-radius: 4px;
+}
+
+/*
+ * header css start
+ */
+ .header {
+	width: 100%;
+	max-width: 1160px;
+	height: 60px;
+	margin: auto;
+    line-height: 50px;
+}
+.header-list {
+	float: left;
+	height: 50px;
+	margin-top: 5px;
+	border: 1px solid #ddd;
+}
+.header-list li {
+	float: left;
+}
+.header-list a {
+	display: block;
+	padding: 0 35px;
+	cursor: pointer;
+}
+.header-list a:hover {
+    background: blue;
+    color: #fff;
+}
+.header  .header-fun {
+	float: right;
+	height: 40px;
+	margin-top: 10px;
+}
+.header .search {
+	float: left;
+	margin-right: 25px;
+	margin-top: 5px;
+}
+.header .search-text {
+	display: block;
+	width: 200px;
+	height: 30px;
+	padding: 0 0 0 40px;
+	margin-right: 5px;
+	border-radius: 18px;
+	border: 1px solid #ddd;
+}
+.header .search-text-wraper {
+	position: relative;
+	float: left;
+}
+.header .search-button {
+	float: left;
+}
+.header .search-icon {
+	display: block;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	left: 9px;
+	top: 5px;
+	background: url('../img/search.png') center center/ 100% 100% no-repeat;
+}
+.header .account-wraper {
+	float: right;
+}
+.header .user {
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+.header .user img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background:#ddd;
+}
+.header .account-wraper .btn {
+	float: left;
+	margin-top: 5px;
+}
+.header .account-wraper .login-button {
+	margin-right: 10px;
+}
+
+/*
+ * header css end
+ */
