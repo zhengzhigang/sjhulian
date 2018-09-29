@@ -16,151 +16,156 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 html, body {
-	font-size: 14px;
-	color: #333;
-	background: #fff;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    background: #fff;
 }
 a {
-	text-decoration: none;
-	color: #333;
+    text-decoration: none;
+    color: #333;
 }
 input, button {
-	outline: none;
+    outline: none;
 }
 button, a {
-	cursor: pointer;
+    cursor: pointer;
 }
 .clearfix:after{
-	content: "020"; 
-	display: block; 
-	height: 0; 
-	clear: both; 
-	visibility: hidden;  
+    content: "020"; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;  
 }
 .clearfix {
-	/* 触发 hasLayout */ 
-	zoom: 1; 
+    /* 触发 hasLayout */ 
+    zoom: 1; 
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .btn {
-	padding: 6px 10px;
-	border-radius: 4px;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
 /*
  * header css start
  */
  .header {
-	width: 100%;
-	max-width: 1160px;
-	height: 60px;
-	margin: auto;
+    width: 1160px;
+    height: 60px;
+    margin: auto;
     line-height: 50px;
 }
 .header-list {
-	float: left;
-	height: 50px;
-	margin-top: 5px;
-	border: 1px solid #ddd;
+    float: left;
+    height: 50px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
 }
 .header-list li {
-	float: left;
+    float: left;
 }
 .header-list a {
-	display: block;
-	padding: 0 35px;
-	cursor: pointer;
+    display: block;
+    padding: 0 35px;
+    cursor: pointer;
 }
 .header-list a:hover {
     background: blue;
     color: #fff;
 }
 .header  .header-fun {
-	float: right;
-	height: 40px;
-	margin-top: 10px;
+    float: right;
+    height: 40px;
+    margin-top: 10px;
 }
 .header .search {
-	float: left;
-	margin-right: 25px;
-	margin-top: 5px;
+    float: left;
+    margin-right: 25px;
+    margin-top: 5px;
 }
 .header .search-text {
-	display: block;
-	width: 200px;
-	height: 30px;
-	padding: 0 0 0 40px;
-	margin-right: 5px;
-	border-radius: 18px;
-	border: 1px solid #ddd;
+    display: block;
+    width: 200px;
+    height: 30px;
+    padding: 0 0 0 40px;
+    margin-right: 5px;
+    border-radius: 18px;
+    border: 1px solid #ddd;
 }
 .header .search-text-wraper {
-	position: relative;
-	float: left;
+    position: relative;
+    float: left;
 }
 .header .search-button {
-	float: left;
+    float: left;
 }
 .header .search-icon {
-	display: block;
-	position: absolute;
-	width: 22px;
-	height: 22px;
-	left: 9px;
-	top: 5px;
-	background: url('../img/search.png') center center/ 100% 100% no-repeat;
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 9px;
+    top: 5px;
+    background: url('../img/search.png') center center/ 100% 100% no-repeat;
 }
 .header .account-wraper {
-	float: right;
+    float: right;
 }
 .header .user {
-	float: left;
-	width: 40px;
-	height: 40px;
-	margin-right: 10px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 .header .user img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background:#ddd;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:#ddd;
 }
 .header .account-wraper .btn {
-	float: left;
-	margin-top: 5px;
+    float: left;
+    margin-top: 5px;
 }
 .header .account-wraper .login-button {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 /*
