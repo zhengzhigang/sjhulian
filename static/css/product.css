@@ -1,0 +1,16 @@
+/* 
+ * 产品选型页面 start
+ */
+ .product-choice {
+     margin-top: 40px;
+ }
+ .product-tab, .product-info {
+     float: left;
+     width: 560px;
+ }
+ .product-tab {
+     margin-right: 40px;
+ }
+/* 
+ * 产品选型页面 end
+ */
