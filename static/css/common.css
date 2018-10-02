@@ -83,6 +83,11 @@ button, a {
     border-radius: 4px;
 }
 
+.container {
+    width: 1160px;
+    margin: auto;
+}
+
 /*
  * header css start
  */
