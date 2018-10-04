@@ -19,6 +19,7 @@ $(function () {
             this.switch_tab();
             this.submit();
             this.fold_panel();
+            this.init_echarts();
         },
         init_rang: function (option) {
             var _this = this;
@@ -116,6 +117,66 @@ $(function () {
                     });
                 }
             });
+        },
+        init_echarts: function () {
+            var set_bar_color = function (params) {
+                var colorList = ['#C33531','#EFE42A','#64BD3D','#EE9201','#29AAE3', '#B74AE5','#0AAF9F','#E89589','#16A085','#4A235A','#C39BD3 ','#F9E79F','#BA4A00','#ECF0F1','#616A6B','#EAF2F8','#4A235A','#3498DB' ]; 
+                return colorList[params.dataIndex]
+            }
+            var option1 = {
+                color: ['#3398DB'],
+                title: {
+                    text: 'QPS与表的行数的关系',
+                    bottom: 0,
+                    left: 'center'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    data: [120, 200, 150, 80, 70],
+                    type: 'bar',
+                    barWidth: 40,
+                    itemStyle: {
+                        normal: {
+                            color: set_bar_color
+                        }
+                    }
+                }]
+            };
+            var option2 = {
+                color: ['#3398DB'],
+                title: {
+                    text: '延迟与表的行数的关系',
+                    bottom: 0,
+                    left: 'center'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    data: [120, 200, 150, 80, 70],
+                    type: 'bar',
+                    barWidth: 40,
+                    itemStyle: {
+                        normal: {
+                            color: set_bar_color
+                        }
+                    }
+                }]
+            };
+            var myChart1 = echarts.init(document.getElementById('main1'));
+            var myChart2 = echarts.init(document.getElementById('main2'));
+            myChart1.setOption(option1);
+            myChart2.setOption(option2);
         }
     }
     product.init();

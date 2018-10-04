@@ -109,6 +109,13 @@
     text-align: center;
     border: 1px solid #555;
 }
+.product-charts .product-charts-item {
+    float: left;
+    width: 558px;
+}
+.product-charts .product-charts-item:first-child {
+    margin-right: 40px;
+}
 /* 
  * 产品选型页面 end
  */
