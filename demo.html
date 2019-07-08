@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding-top: 100px;
+            height: 20px;
+        }
+        ul::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        li {
+            position: relative;
+            float: left;
+            margin-right: 5px;
+            width: 10px;
+            height: 20px;
+            background: lightblue;
+            cursor: pointer;
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+        .popup {
+            position: absolute;
+            display: inline-block;
+            padding: 0 4px;
+            line-height: 20px;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: gray;
+            color: red;
+            z-index: 9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+        $('ul li').hover(function() {
+            var popup = $('<span class="popup"/>');
+            popup.html('10%')
+            $('ul li').empty()
+            $(this).append(popup)
+        })
+    </script>
+</body>
+</html>

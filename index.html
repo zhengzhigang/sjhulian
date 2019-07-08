@@ -176,7 +176,7 @@
         </div>
         <div class="footer"></div>
     </div>
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
     <script src="./static/js/swiper/js/swiper.js"></script>
     <script>
         var mySwiper = new Swiper ('.swiper-container', {
@@ -185,6 +185,32 @@
             pagination: '.swiper-pagination',
             paginationClickable: true
         })        
+    </script>
+    <input type="file" id="fileInput">
+    <audio id="myAudio" controls muted>
+            <source src="horse.mp3" />
+
+        <!-- 您的浏览器不支持 audio 元素。 -->
+    </audio><br>
+    <div id="a"></div>
+    <script>
+        var x = document.getElementById("myAudio");
+
+        var fireOnThis = document.getElementById('a');
+        fireOnThis.click()
+
+            x.play()
+        x.muted = false;
+        var fileInput = document.querySelector('#fileInput');
+    
+        fileInput.onchange = function () {
+            var file = this.files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                console.log(reader.result);
+            };
+        };
     </script>
 </body>
 </html>

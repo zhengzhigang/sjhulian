@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://localhost:3100/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <script>
+        let sock=io.connect('ws://localhost:3100/');
+        sock.on('connect', ()=>{
+        document.getElementsByClassName('err_box')[0].style.display='none';
+        });
+        sock.on('disconnect', ()=>{
+        document.getElementsByClassName('err_box')[0].style.display='block';
+        });
+
+        //聊天室
+        window.onload=function (){
+        let oTxt=document.getElementById('txt1');
+        let oBtn=document.getElementById('btn1');
+        let oUl=document.getElementById('ul1');
+
+        oBtn.onclick=function (){
+            sock.emit('msg', oTxt.value);
+
+            let oLi=document.createElement('li');
+            oLi.innerHTML=oTxt.value;
+            oLi.className='me';
+
+            oTxt.value='';
+
+            oUl.appendChild(oLi);
+        };
+
+        sock.on('msg', str=>{
+            let oLi=document.createElement('li');
+
+            oLi.innerHTML=str;
+            oUl.appendChild(oLi);
+        });
+        };
+    </script>
+</body>
+</html>
